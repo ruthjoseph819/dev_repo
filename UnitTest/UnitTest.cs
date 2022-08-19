@@ -4,18 +4,18 @@ using DateApp;
 namespace UnitTest
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTest
     {
         [TestMethod]
-        public void AddDaysToDate()
+        public void AddDaysToDate_Test()
         {
-            // Arrange
+           // Arrange
 
             string inputdate = "28/02/2021" ;
             int inputdays = 5;
             string expectedOutput = "5/3/2021";
             // Act
-            string actualOutput = Program.addDays(inputdate, inputdays);
+            string actualOutput = Program.addDaysToDate(inputdate, inputdays);
             
             // Assert
             Assert.AreEqual(expectedOutput, actualOutput);

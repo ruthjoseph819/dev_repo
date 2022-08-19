@@ -1,14 +1,5 @@
-﻿// Online C# Editor for free
-// Write, Edit and Run your C# code using C# Online Compiler
-
-// Online C# Editor for free
-// Write, Edit and Run your C# code using C# Online Compiler
-
+﻿
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DateApp
 {
@@ -85,8 +76,9 @@ namespace DateApp
         }
 
         // Add x days to the given date.
-        public static string addDays( string DateInput, int x)
+        public static string addDaysToDate( string DateInput, int x)
         {
+            //splitting the given date into date,month and year
             string[] DateTimeArray = DateInput.Split('/');
 
             //String DateTime 
@@ -133,19 +125,17 @@ namespace DateApp
         // Driven Program
         static void Main(string[] args)
         {
-            Console.WriteLine("Please Enter Your DateTime: \n");
+            Console.WriteLine("Please Enter Your Date In dd/mm/yyyy Format: ");
             //you input your string dateTime Like 2/12/2013
             //string DateInput = "2/12/2013";
 
             string DateInput = Console.ReadLine();
-
-            //split it
-            //int d = 14, m = 3, y = 2015;
-            Console.WriteLine("Please Enter days to be added: \n");
+                       
+            Console.WriteLine("Please Enter days to be added: ");
 
             int days = int.Parse(Console.ReadLine());
-            string OutDate = addDays(DateInput , days);
-            Console.WriteLine("New date is:" + OutDate);
+            string OutDate = addDaysToDate(DateInput , days);
+            Console.WriteLine("\nNew date is : " + OutDate);
         }
     }
 }
